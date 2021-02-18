@@ -2,9 +2,8 @@
 
 const imgs = carousel.querySelectorAll('li');
 imgs.forEach((element) => {
-    element.style.position = 'relative';
+  element.style.position = 'relative';
 });
-
 
 /* configuration */
 let width = 130; // image width
