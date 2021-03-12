@@ -1,19 +1,9 @@
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css";
 
-body {
-    font-family: 'Abril Fatface';
-    background-color: #000000;
+.is-flex-direction-column {
+    max-width: 50%;
 }
 
-.hero-body {
-    background-color: rgb(165, 0, 0);
-}
-
-.box {
-    background-image: linear-gradient(rgb(255, 255, 100), white);
-}
-
-address {
-    display: block;
-    font-style: normal;
+#map {
+    height: 180px;
 }
