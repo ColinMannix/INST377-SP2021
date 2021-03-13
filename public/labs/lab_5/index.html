@@ -3,6 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
     integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
     crossorigin=""/>
@@ -24,8 +25,9 @@
         <div class="block">
           <form id="search-form" class="block form">
             <div class="control">
-              <input class="input" type="text" placeholder="Search by restaurant name, city, or category...">
-              <button type="submit"></button>
+              <label for="zip">Zip</label>
+              <input name="zip" class="input" type="text" id="zip" placeholder="Search by zip code">
+              <button type="submit">Submit</button>
             </div>
           </form>
           <div class="suggestions-list">

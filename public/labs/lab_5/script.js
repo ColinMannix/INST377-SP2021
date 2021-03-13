@@ -69,7 +69,7 @@ async function dataHandler(mapObjectFromFunction) {
     const form  = document.querySelector('.form');
     const suggestions = document.querySelector('.suggestions');
   
-    form.addEventListener('submit', (evt) => { displayMatches(evt) });
+    form.addEventListener('submit', (evt) => { displayMatches(evt)});
 }
 
 async function windowActions() {
