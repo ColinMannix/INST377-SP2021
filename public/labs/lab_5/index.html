@@ -6,40 +6,42 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
     integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
     crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""></script>
     <title>Colin Mannix Lab 5</title>
   </head>
   <body>
-    <div class="is-flex-direction-column">
+    <section class="section">
+      <div class="container columns is-max-widescreen">
+        <div class="column info">
         <section class="hero is-primary">
-            <div class="hero-body">
-              <h1 class="title">
-                Colin Mannix's Lab 5
-              </h1>
-              <p class="subtitle">
-                Food Search
-              </p>
-            </div>
+          <div class="hero-body">
+            <h1 class="title">Colin Mannix's Lab 5</h1>
+            <p class="subtitle">Zip Code Food Search</p>
+          </div>
         </section>
-      
-        <form class="field">
-            <label class="label"></label>
+        <div class="block">
+          <form id="search-form" class="block form">
             <div class="control">
               <input class="input" type="text" placeholder="Search by restaurant name, city, or category...">
+              <button type="submit">Submit</button>
             </div>
-        </form>
-
-        <div class="suggestions-list">
+          </form>
+          <div class="suggestions-list">
             
-            <ul class="suggestions">
+              <ul class="suggestions">
                 <!-- List items appear here -->
-            </ul>
-            
+              </ul>
+          </div>
         </div>
-    </div>
-    <div id="map"></div>
+      </div>
+          <div class="column">
+            <div class="box" id="mapid">Map goes here</div>
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
   <script src="script.js"></script>
-  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-   crossorigin=""></script>
 </html>

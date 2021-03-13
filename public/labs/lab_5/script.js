@@ -11,7 +11,7 @@ async function windowActions() {
   function findMatches(wordToMatch, restaurants) {
     const tempArr = restaurants.filter(place => {
       const regex = new RegExp(wordToMatch, 'gi');
-      return place.zip.match(regex) || place.name.match(regex) || place.category.match(regex)
+      return place.name.match(regex) || place.name.match(regex) || place.category.match(regex)
     });
     const tempSet = new Set(tempArr.map(place => place.establishment_id));
     const unique_ids = Array.from(tempSet).slice(0,9);
@@ -31,7 +31,6 @@ async function windowActions() {
         }
       }
     }
-    
     return results;
   }
 
@@ -55,21 +54,9 @@ function displayMatches(event) {
   }).join('');
   suggestions.innerHTML= html;
 }
-
   const searchInput  = document.querySelector('.input');
   const suggestions = document.querySelector('.suggestions');
 
   searchInput.addEventListener('submit', (evt) => { displayMatches(evt) });
-
-  let mymap = L.map('map').setView([51.505, -0.09], 13);
-  L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
-    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-    maxZoom: 18,
-    id: 'mapbox/streets-v11',
-    tileSize: 512,
-    zoomOffset: -1,
-    accessToken: 'pk.eyJ1IjoiY21hbm5peDEiLCJhIjoiY2ttNndkNTE3MHNkdDJ5bzl5dWltamYwYyJ9.EX7hr3OsYksLFp_m5hWU9Q'
-}).addTo(mymap);
-
 }
 window.onload = windowActions();
